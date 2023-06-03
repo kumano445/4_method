@@ -33,19 +33,23 @@
 // funcは実行する関数名
 // 税込み価格を計算して四捨五入して整数にしている(スコープ内でしか参照できません。)
     const taxPrice = Math.round(price * 1.10);
-    func(taxPrice, price);
+    func(taxPrice);
   }
 // トマトの税込み価格をコンソールに表示させる処理
-  { const tomato =function (taxPrice, price){
-    console.log("Q3 オニオンの値段は" +  taxPrice + "円");
+  const tomato =function (taxPrice){
+    console.log("Q3 トマトの値段は" + taxPrice  + "円");
     return false;
+    // ある要素で発火したイベントはその全ての親要素に伝播していくとのことでした。
+    // jQueryでのreturn false　親要素へのイベント伝播を止める.
+// JavaScriptでのreturn false　親要素へのイベント伝播を止めない.
+// それ以上の親要素への伝播を止めるためにはあったほうがいいと確認したので追加させていただきました。
     }
     addTax(120, tomato);
-  }
 
 // 玉ねぎの税込み価格をコンソールに表示させる処理
-    const onion =function (taxPrice, price){
+    const onion =function price(taxPrice){
     console.log("Q3 玉ねぎの値段" + taxPrice + "円");
+    
     return false;
     }
     addTax(115, onion);
