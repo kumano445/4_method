@@ -37,7 +37,7 @@
   }
 // トマトの税込み価格をコンソールに表示させる処理
   const tomato =function (taxPrice){
-    console.log("Q3 トマトの値段は" + taxPrice  + "円");
+    console.log(taxPrice);
     return false;
     // ある要素で発火したイベントはその全ての親要素に伝播していくとのことでした。
     // jQueryでのreturn false　親要素へのイベント伝播を止める.
@@ -48,7 +48,7 @@
 
 // 玉ねぎの税込み価格をコンソールに表示させる処理
     const onion =function price(taxPrice){
-    console.log("Q3 玉ねぎの値段" + taxPrice + "円");
+    console.log(taxPrice);
     
     return false;
     }
